@@ -53,6 +53,6 @@ if __name__ == '__main__':
     # print(is_palindrome('not a palindrome'))
     # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
-    # print(count_vowels('there are vowels in HERE'))
+    print(count_vowels('there are vowels in HERE'))
     # print(reverse_list([1, 2, 3, 4, 5]))
 
