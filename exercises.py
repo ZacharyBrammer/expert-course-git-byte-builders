@@ -36,7 +36,12 @@ def count_vowels(str):
     Write a program that takes a string as input and counts the number of vowels
     (a, e, i, o, u, A, E, I, O, U) in the string.
     '''
-    return 0
+    vowels = 0
+    vowelList = 'aeiou'
+    for ch in str:
+        if ch.lower() in vowelList:
+            vowels+=1
+    return vowels
 
 def reverse_list(lst):
     '''
@@ -52,6 +57,6 @@ if __name__ == '__main__':
     # print(is_palindrome('not a palindrome'))
     # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
-    # print(count_vowels('there are vowels in HERE'))
+    print(count_vowels('there are vowels in HERE'))
     # print(reverse_list([1, 2, 3, 4, 5]))
 
