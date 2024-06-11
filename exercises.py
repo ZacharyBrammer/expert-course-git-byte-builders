@@ -45,7 +45,6 @@ def count_vowels(str):
 
 def reverse_list(lst):
     lst1 = lst.reverse()
-    print(lst1)
     
     '''
     Write a function that takes a list as input and returns a new list with the elements
