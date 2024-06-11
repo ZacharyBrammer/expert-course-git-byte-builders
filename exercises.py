@@ -28,10 +28,7 @@ def is_anagram(str1, str2):
     Write a function that checks if two given strings are anagrams (i.e. contain the same
     letters but in a different order). For example, "listen" and "silent" are anagrams.
     '''
-    str1 = str1.replace(" ", "").lower()
-    str2 = str2.replace(" ", "").lower()
-    
-    return sorted(str1) == sorted(str2)
+    return False
 
 def count_vowels(str):
     '''
@@ -52,7 +49,8 @@ if __name__ == '__main__':
     fizzbuzz()
     # print(is_palindrome('racecar'))
     # print(is_palindrome('not a palindrome'))
-    print(is_anagram('listen', 'silent'))
+    # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
     # print(count_vowels('there are vowels in HERE'))
     # print(reverse_list([1, 2, 3, 4, 5]))
+
