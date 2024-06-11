@@ -24,11 +24,12 @@ def is_palindrome(str):
     return False
 
 def is_anagram(str1, str2):
-    '''
-    Write a function that checks if two given strings are anagrams (i.e. contain the same
-    letters but in a different order). For example, "listen" and "silent" are anagrams.
-    '''
-    return False
+    # anagram checker
+    
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+    
+    return sorted(str1) == sorted(str2)
 
 def count_vowels(str):
     '''
