@@ -6,12 +6,15 @@ Finally, create a pull request.
 '''
 
 def fizzbuzz():
-    '''
-    Write a function that prints the numbers from 1 to 100. But for multiples of three
-    print "Fizz" instead of the number and for the multiples of five print "Buzz". For
-    numbers which are multiples of both three and five print "FizzBuzz".
-    '''
-    print('')
+    for i in range(100):
+        if(i % 3 == 0 and i % 5 == 0):
+            print("FizzBuzz")
+        elif(i % 3 == 0):
+            print("Fizz")
+        elif(i % 5 == 0):
+            print("Buzz")
+        else:
+            print(i)
 
 def is_palindrome(str):
     '''
@@ -21,18 +24,24 @@ def is_palindrome(str):
     return False
 
 def is_anagram(str1, str2):
-    '''
-    Write a function that checks if two given strings are anagrams (i.e. contain the same
-    letters but in a different order). For example, "listen" and "silent" are anagrams.
-    '''
-    return False
+    # anagram checker
+    
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+    
+    return sorted(str1) == sorted(str2)
 
 def count_vowels(str):
     '''
     Write a program that takes a string as input and counts the number of vowels
     (a, e, i, o, u, A, E, I, O, U) in the string.
     '''
-    return 0
+    vowels = 0
+    vowelList = 'aeiou'
+    for ch in str:
+        if ch.lower() in vowelList:
+            vowels+=1
+    return vowels
 
 def reverse_list(lst):
     lst1 = lst.reverse()
@@ -46,10 +55,11 @@ def reverse_list(lst):
 
 if __name__ == '__main__':
     # test and run your functions here
-    # fizzbuzz()
+    fizzbuzz()
     # print(is_palindrome('racecar'))
     # print(is_palindrome('not a palindrome'))
     # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
-    # print(count_vowels('there are vowels in HERE'))
     print(reverse_list([1, 2, 3, 4, 5]))
+    print(count_vowels('there are vowels in HERE'))
+    # print(reverse_list([1, 2, 3, 4, 5]))
