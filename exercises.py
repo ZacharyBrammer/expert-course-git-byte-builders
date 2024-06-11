@@ -6,12 +6,15 @@ Finally, create a pull request.
 '''
 
 def fizzbuzz():
-    '''
-    Write a function that prints the numbers from 1 to 100. But for multiples of three
-    print "Fizz" instead of the number and for the multiples of five print "Buzz". For
-    numbers which are multiples of both three and five print "FizzBuzz".
-    '''
-    print('')
+    for i in range(100):
+        if(i % 3 == 0 and i % 5 == 0):
+            print("FizzBuzz")
+        elif(i % 3 == 0):
+            print("Fizz")
+        elif(i % 5 == 0):
+            print("Buzz")
+        else:
+            print(i)
 
 def is_palindrome(str):
     '''
@@ -43,7 +46,7 @@ def reverse_list(lst):
 
 if __name__ == '__main__':
     # test and run your functions here
-    # fizzbuzz()
+    fizzbuzz()
     # print(is_palindrome('racecar'))
     # print(is_palindrome('not a palindrome'))
     # print(is_anagram('listen', 'silent'))
